@@ -1,0 +1,11 @@
+version: 2 # dbt schema version - always 2 for modern dbt projects
+
+sources:
+  - name: jaffle_shop # the name we use in models: {{ source('jaffle_shop', 'table_name') }}
+    database: jaffle_shop # actual Snowflake database name
+    schema: raw # actual Snowflake schema where raw data lives
+
+    tables:
+      - name: raw_customers # maps to jaffle_shop.raw.raw_customers in Snowflake
+      - name: raw_orders # maps to jaffle_shop.raw.raw_orders in Snowflake
+      - name: raw_payments # maps to jaffle_shop.raw.raw_payments in Snowflake
