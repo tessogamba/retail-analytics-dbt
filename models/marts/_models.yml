@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Fact table for orders. One row per order. Joins orders and payments from staging layer."
+    columns:
+      - name: order_id
+        description: "Primary key for orders"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to dim_customers"
+        tests:
+          - not_null
+      - name: order_date
+        description: "Date the order was placed"
+        tests:
+          - not_null
+      - name: status
+        description: "Current status of the order"
+      - name: payment_method
+        description: "Method used to pay for the order"
+      - name: amount
+        description: "Total amount paid in GBP. Converted from cents in staging layer."
+
+  - name: dim_customers
+    description: "Dimension table for customers. One row per customer. Includes aggregated order metrics."
+    columns:
+      - name: customer_id
+        description: "Primary key for customers"
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: "Customer first name"
+      - name: last_name
+        description: "Customer last name"
+      - name: number_of_orders
+        description: "Total number of orders placed by this customer"
+      - name: first_order_date
+        description: "Date of the customer's first ever order"
+      - name: most_recent_order_date
+        description: "Date of the customer's most recent order"
+      - name: lifetime_value
+        description: "Total amount spent by this customer across all orders in GBP"

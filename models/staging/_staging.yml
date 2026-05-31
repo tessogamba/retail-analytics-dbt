@@ -1,0 +1,57 @@
+version: 2 # dbt schema version
+
+models:
+  - name: stg_customers
+    description: "Cleaned and renamed customer records from raw source data"
+    columns:
+      - name: customer_id
+        description: "Primary key for customers - every customer must have a unique ID"
+        tests:
+          - unique      # no two customers can share the same ID
+          - not_null    # every record must have a customer ID
+
+  - name: stg_orders
+    description: "Cleaned and renamed order records from raw source data"
+    columns:
+      - name: order_id
+        description: "Primary key for orders"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to stg_customers - every order must belong to a customer"
+        tests:
+          - not_null
+          - relationships:
+              arguments:        # dbt Fusion requires arguments wrapper for relationship tests
+                to: ref('stg_customers')
+                field: customer_id
+      - name: status
+        description: "Current status of the order - must be one of the defined values"
+        tests:
+          - accepted_values:
+              arguments:        # dbt Fusion requires arguments wrapper for accepted_values
+                values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+
+  - name: stg_payments
+    description: "Cleaned and renamed payment records from raw source data"
+    columns:
+      - name: payment_id
+        description: "Primary key for payments"
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "Foreign key to stg_orders - every payment must link to an order"
+        tests:
+          - not_null
+          - relationships:
+              arguments:        # dbt Fusion requires arguments wrapper for relationship tests
+                to: ref('stg_orders')
+                field: order_id
+      - name: payment_method
+        description: "Payment method used - must be one of the defined values"
+        tests:
+          - accepted_values:
+              arguments:        # dbt Fusion requires arguments wrapper for accepted_values
+                values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
