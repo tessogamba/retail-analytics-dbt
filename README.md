@@ -25,17 +25,16 @@ Raw data loaded directly into Snowflake (`jaffle_shop.raw` schema):
 | `raw_payments` | Payment records | 198 |
 
 ## Project Structure
-models/
-├── staging/
-│   ├── _sources.yml        # Source definitions pointing to raw Snowflake tables
-│   ├── _models.yml         # Staging model documentation and tests
-│   ├── stg_customers.sql   # Cleaned customer records
-│   ├── stg_orders.sql      # Cleaned order records
-│   └── stg_payments.sql    # Cleaned payment records (amounts converted to GBP)
-└── marts/
-├── _models.yml         # Mart model documentation and tests
-├── fct_orders.sql      # Fact table: one row per order with payment details
-└── dim_customers.sql   # Dimension table: one row per customer with order metrics
+
+**Staging layer** — `models/staging/`
+- `_sources.yml` — source definitions
+- `stg_customers.sql` — cleaned customer records
+- `stg_orders.sql` — cleaned order records  
+- `stg_payments.sql` — amounts converted from cents to GBP
+
+**Mart layer** — `models/marts/`
+- `fct_orders.sql` — fact table, one row per order
+- `dim_customers.sql` — dimension table with customer order metrics
 
 ## Data Lineage
 <img width="2422" height="1180" alt="Screenshot 2026-05-31 at 17 19 32" src="https://github.com/user-attachments/assets/11b1ef38-e07a-4836-bc70-fa1f6b96d151" />
