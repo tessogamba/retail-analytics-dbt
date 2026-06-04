@@ -77,9 +77,11 @@ dbt test
 # Generate documentation
 dbt docs generate
 ```
+## Related Projects:
+[retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) - Tableau dashboard built on top of this pipeline
 
 ## Author
 
-**Teresia Ogamba a.k.a Tess Ogamba** — Analytics Engineer
+**Teresia Ogamba a.k.a Tess Ogamba** — Data Analyst & Analytics Engineer
 
 [LinkedIn](https://linkedin.com/in/tessogamba) | [Website](https://tessogamba.com) | [GitHub](https://github.com/tessogamba)
