@@ -82,6 +82,6 @@ dbt docs generate
 
 ## Author
 
-**Teresia Ogamba a.k.a Tess Ogamba** — Data Analyst & Analytics Engineer
+**Teresia Ogamba a.k.a Tess Ogamba** — Analytics Engineer & Data Analyst
 
 [LinkedIn](https://linkedin.com/in/tessogamba) | [Website](https://tessogamba.com) | [GitHub](https://github.com/tessogamba)
