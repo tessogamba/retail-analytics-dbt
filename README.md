@@ -78,10 +78,11 @@ dbt test
 # Generate documentation
 dbt docs generate
 ```
-## Related Projects:
-[retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) - Tableau dashboard built on top of this pipeline
+## Related Projects
 
-[financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) - financial analytics engineering project created with SQL in BigQuery
+- [retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) — Tableau dashboard created on top of this pipeline
+- [financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) — Financial analytics engineering project created with BigQuery and raw SQL
+- [financial-analytics-looker](https://github.com/tessogamba/financial-analytics-looker) — Looker Studio dashboard created on top of the BigQuery pipeline
 
 ## Author
 
