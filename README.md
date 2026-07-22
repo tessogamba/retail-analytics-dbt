@@ -79,11 +79,10 @@ dbt test
 dbt docs generate
 ```
 ## Related Projects
-
-- [retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) — Tableau dashboard created on top of this pipeline
-- [financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) — Financial analytics engineering project created with BigQuery and raw SQL
-- [financial-analytics-looker](https://github.com/tessogamba/financial-analytics-looker) — Looker Studio dashboard created on top of the BigQuery pipeline
-
+- [case-management-analytics-pipeline-power-bi](https://github.com/tessogamba/case-management-analytics-pipeline-power-bi) - Production analytics pipeline built on a live SQL Server case management database with Power Query, dimensional modelling and DAX
+- [retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) - Tableau dashboard created on top of this pipeline
+- [financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) - Financial analytics engineering project created with BigQuery and raw SQL
+- [financial-analytics-looker](https://github.com/tessogamba/financial-analytics-looker) - Looker Studio dashboard created on top of the BigQuery pipeline
 ---
 
 *Built by Tess Ogamba · [github.com/tessogamba](https://github.com/tessogamba)*
