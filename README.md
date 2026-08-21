@@ -1,10 +1,11 @@
-# Retail Analytics dbt Project
-An end-to-end analytics engineering project built with **dbt**, **Snowflake**, and **SQL**, demonstrating staging layers, dimensional modelling, data quality testing, and documentation.
+# Retail Analytics: dbt & Snowflake
+
+A retail analytics project built with **dbt**, **Snowflake** and **SQL**, transforming raw customer, order and payment data into tested dimensional models for business analysis.
 
 ---
 ## Project Overview
 
-This project transforms raw retail transaction data into analytics-ready dimensional models using modern data engineering practices. It simulates a real-world analytics engineering workflow where raw source data is cleaned, tested, and modelled into business-ready tables.
+This project demonstrates a structured transformation workflow in which raw source data is cleaned, tested and modelled into reliable, business-ready tables for customer, order and revenue analysis.
 
 ## Tech Stack
 
@@ -78,10 +79,10 @@ dbt docs generate
 ```
 ## Related Projects
 
-- [case-management-analytics-pipeline-power-bi](https://github.com/tessogamba/case-management-analytics-pipeline-power-bi) - Production analytics pipeline built on a live SQL Server case management database with Power Query, dimensional modelling and DAX
-- [retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) - Tableau dashboard created on top of this pipeline
-- [financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) - Financial analytics engineering project created with BigQuery and raw SQL
-- [financial-analytics-looker](https://github.com/tessogamba/financial-analytics-looker) - Data Studio (formerly Looker Studio) dashboard created on top of the BigQuery pipeline
+- [case-management-analytics-pipeline-power-bi](https://github.com/tessogamba/case-management-analytics-pipeline-power-bi) - Production SQL Server-to-Power BI reporting pipeline with dimensional modelling, DAX and governed data-quality controls
+- [retail-analytics-tableau](https://github.com/tessogamba/retail-analytics-tableau) - Tableau dashboard for customer, sales and revenue analysis using these transformed datasets
+- [financial-analytics-bigquery](https://github.com/tessogamba/financial-analytics-bigquery) - Financial analytics project using BigQuery and reusable SQL models across 12 public companies and 23 metrics
+- [financial-analytics-looker-studio](https://github.com/tessogamba/financial-analytics-looker-studio) - Looker Studio dashboard for exploring financial growth, profitability and risk
 
 ---
 *Built by Tess Ogamba · [github.com/tessogamba](https://github.com/tessogamba) · [LinkedIn](https://linkedin.com/in/tessogamba)*
