@@ -1,6 +1,5 @@
-# Retail Analytics: dbt & Snowflake
-
-A retail analytics project built with **dbt**, **Snowflake** and **SQL**, transforming raw customer, order and payment data into tested dimensional models for business analysis.
+# Retail Analytics Engineering (dbt & Snowflake)
+An enterprise-aligned analytics engineering platform using dbt Cloud, Snowflake, and SQL to orchestrate modular data pipelines, programmatic data-quality assertions, and optimised star-schema dimensional models.
 
 ---
 ## Project Overview
